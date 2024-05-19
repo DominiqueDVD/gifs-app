@@ -29,7 +29,7 @@ export class GifsService {
     }
 
     this._tagsHistory.unshift(tag);
-    this._tagsHistory = this._tagsHistory.splice(0, 10);
+    this._tagsHistory = this._tagsHistory.splice(0, 20);
     this.saveLocalStorage();
   }
 
@@ -52,7 +52,7 @@ export class GifsService {
     this.organizeHistory(tag);
     const params = new HttpParams()
       .set('api_key', this.apiKey)
-      .set('limit', 10)
+      .set('limit', 20)
       .set('q', tag)
 
 
